@@ -10,10 +10,10 @@ git clone https://github.com/dix0nym/TeoPdfToCSV
 cd TeoPdfToCSV
 
 # install requirements via pipenv
-
-# install pipenv  before if necessary
-pip install pipenv --user
 pipenv install
+
+# install pipenv before if necessary
+pip install pipenv --user
 
 # install requirements via pip
 pip install --user -r requirements.txt
@@ -44,6 +44,15 @@ pipenv run python teoPdfToCSV.py -o output\ bank_statement.pdf
 
 # process all files in "input\" and write CSVs to "output\"
 pipenv run python teoPdfToCSV.py -o output\ input\
+```
+
+## CSV Structure
+
+The generated CSV has the following structure:
+
+```csv
+Buchungstag,Name,Buchungstext,Wertstellung,Betrag
+01.01.2024,Max Mustermann,Max Mustermann SEPA-BASISLASTSCHRIFT,01.01.2024,-100,00
 ```
 
 ## Requirements
